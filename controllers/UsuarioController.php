@@ -12,13 +12,13 @@ class UsuarioController extends Usuario
         $nombre = $params['nombre'];
         $clave = $params['clave'];
         $mail = $params['mail'];
-        $sector = $params['sector'];
+        $rol = $params['rol'];
 
         $newUser = new Usuario();
         $newUser->nombre = $nombre;
         $newUser->clave = $clave;
         $newUser->mail = $mail;
-        $newUser->sector = $sector;
+        $newUser->rol = $rol;
         $newUser->CrearUsuario();
 
         $payload = json_encode(array("mensaje" => "El usuario se ha creado exitosamente"));

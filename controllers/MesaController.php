@@ -8,15 +8,15 @@ class MesaController extends Mesa
     {
         $params = $request->getParsedBody();
 
-        $codigoMesa = $params['codigoDeMesa'];
-        $estadoMesa = $params['estadoDeMesa'];
+        $codigoMesa = $params['CodigoDeMesa'];
+        $estadoMesa = $params['EstadoDeMesa'];
 
         $newTable = new Mesa();
         $newTable->codigoMesa = $codigoMesa;
         $newTable->estadoMesa = $estadoMesa;
         $newTable->CrearMesa();
 
-        $payload = json_encode(array("mensaje" => "El usuario se ha creado exitosamente"));
+        $payload = json_encode(array("mensaje" => "La mesa se ha creado exitosamente"));
 
         $response->getBody()->write($payload);
 

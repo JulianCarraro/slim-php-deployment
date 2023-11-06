@@ -16,7 +16,7 @@ Class Producto
     {
         $objAcessoDatos = AccesoDatos::ObtenerInstancia();
         $consulta = $objAcessoDatos->PrepararConsulta("INSERT INTO productos (Nombre, Precio, Sector) VALUES (:nombre, :precio, :sector)");
-        $consulta->bindValue(':nombre', $this->nombre, PDO::PARAM_STR);
+        $consulta->bindValue(':nombre', $this->nombre, PDO::PARAM_STR);  //derecha le guarda a izquierda
         $consulta->bindValue(':precio', $this->precio, PDO::PARAM_INT);
         $consulta->bindValue(':sector', $this->sector, PDO::PARAM_STR);
         $consulta->execute();

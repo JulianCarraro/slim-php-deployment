@@ -42,8 +42,25 @@ $app->addBodyParsingMiddleware();
 
 $app->group('/usuarios', function (RouteCollectorProxy $group)
 {
-    // $group->get('[/]', \UsuarioController::class . ':TraerTodos');
-    // $group->get('/{usuario}', \UsuarioController::class . ':TraerUno');
+    $group->get('[/]', \UsuarioController::class . ':TraerTodos');
+    $group->post('[/]', \UsuarioController::class . ':CargarUno');
+});
+
+$app->group('/mesas', function (RouteCollectorProxy $group)
+{
+    $group->get('[/]', \MesaController::class . ':TraerTodos');
+    $group->post('[/]', \MesaController::class . ':CargarUno');
+});
+
+$app->group('/productos', function (RouteCollectorProxy $group)
+{
+    $group->get('[/]', \UsuarioController::class . ':TraerTodos');
+    $group->post('[/]', \UsuarioController::class . ':CargarUno');
+});
+
+$app->group('/pedidos', function (RouteCollectorProxy $group)
+{
+    $group->get('[/]', \UsuarioController::class . ':TraerTodos');
     $group->post('[/]', \UsuarioController::class . ':CargarUno');
 });
 
