@@ -1,0 +1,6 @@
+IdUsuario,Nombre,Clave,Mail,Rol,FechaAlta,FechaModificacion,EstadoDeCuenta
+13,ElCervecero,12345,ElCervecero@gmail.com,Cervecero,2023-11-16,2023-11-16,Activo
+14,ElCocinero,12345,ElCocinero@gmail.com,Cocinero,2023-11-16,2023-11-16,Activo
+15,Rogelio,123,ElBartender@gmail.com,Bartender,2023-11-13,2023-11-16,Activo
+16,Samuel,12345,ElMozo@gmail.com,Mozo,2023-11-16,2023-11-16,Activo
+17,Martin,123450,ElCliente@gmail.com,Cliente,2023-11-16,2023-11-16,Activo
